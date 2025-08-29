@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeXplosion 2025 - Hackathon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            overflow-x: hidden;
+        }
+
+        .section-container {
+            min-height: 100vh;
+            padding: 6rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #6EE7B7, #3B82F6);
+        }
+    </style>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9]">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#0d1117] bg-opacity-80 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">CodeXplosion</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
+                <a href="#tracks" class="hover:text-blue-500 transition-colors">Tracks</a>
+                <a href="#schedule" class="hover:text-blue-500 transition-colors">Schedule</a>
+                <!-- Link to the registration page -->
+                <a href="register.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full transition-colors">Register</a>
+            </div>
+            <button class="md:hidden">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section-container text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/161b22/c9d1d9?text=CodeXplosion');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 p-4">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold mb-4 gradient-text fade-in">CodeXplosion 2025</h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl fade-in">
+                Ignite your innovation. Collaborate, code, and create solutions that redefine the future.
+            </p>
+            <!-- Link to the registration page -->
+            <a href="registerq.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg transform hover:scale-105 fade-in">
+                Register Your Team
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-container bg-[#161b22] text-center">
+        <div class="max-w-5xl fade-in">
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-6 text-white">About the Event</h2>
+            <p class="text-base sm:text-lg text-gray-400 mb-4">
+                CodeXplosion is a premier 24-hour hackathon hosted by the Artificial Intelligence and Data Science Department of Dhanalakshmi College of Engineering. This event is a vital platform designed to provide students with hands-on experience, fostering collaborative problem-solving and rapid prototyping skills.
+            </p>
+            <p class="text-base sm:text-lg text-gray-400">
+                Our mission is to broaden technical exposure, facilitate career development through industry engagement, and cultivate leadership skills among participants. We guarantee a responsibly managed event, meticulously coordinated under the supervision of our esteemed faculty to ensure a seamless and enriching experience for all.
+            </p>
+        </div>
+    </section>
+
+    <!-- Event Details/Schedule Section -->
+    <section id="schedule" class="section-container">
+        <div class="max-w-5xl fade-in text-center">
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-8 text-white">Important Dates & Details</h2>
+            <div class="flex flex-col items-center justify-center">
+                <div id="countdown" class="text-6xl font-extrabold gradient-text mb-4 p-6 rounded-2xl shadow-2xl bg-[#20252b] border-4 border-blue-500 flex items-center justify-center">
+                    <!-- Countdown will be injected here -->
+                </div>
+                <div class="text-lg text-gray-300 mb-6 px-6 py-4 bg-[#161b22] rounded-xl shadow-lg max-w-xl">
+                    <span class="font-semibold text-blue-400 text-xl">Countdown to Registration Close:</span>
+                    <br>
+                    Registration closes on <span class="font-bold text-white">September 15, 2025, 11:59 PM</span>.<br>
+                    Don’t miss your chance—secure your spot now!
+                </div>
+                <div class="bg-[#161b22] p-6 rounded-xl shadow-lg w-full max-w-xl mx-auto">
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Event Schedule</h3>
+                    <p class="text-gray-400">
+                        *September 19th and 20th, 2025*
+                    </p>
+                    <p class="text-gray-400 mt-2">
+                        A 24-hour non-stop coding marathon.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section id="tracks" class="section-container bg-[#161b22]">
+        <div class="max-w-5xl fade-in text-center">
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-8 text-white">Focus Areas & Benefits</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-[#20252b] rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-2 gradient-text">AI & Data Science</h3>
+                    <p class="text-gray-400 text-sm">Dive deep into machine learning and data analysis.</p>
+                </div>
+                <div class="p-6 bg-[#20252b] rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Web/Mobile Dev</h3>
+                    <p class="text-gray-400 text-sm">Build full-stack applications for real-world use.</p>
+                </div>
+                <div class="p-6 bg-[#20252b] rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Cybersecurity</h3>
+                    <p class="text-gray-400 text-sm">Secure systems and innovate in threat detection.</p>
+                </div>
+                <div class="p-6 bg-[#20252b] rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Emerging Tech</h3>
+                    <p class="text-gray-400 text-sm">Explore IoT, blockchain, and other future-forward tech.</p>
+                </div>
+            </div>
+            <div class="mt-8 p-6 bg-[#20252b] rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-2 text-white">Exclusive Benefits</h3>
+                <ul class="text-gray-400 text-left list-disc list-inside space-y-2 text-sm">
+                    <li>*Internship Opportunities:* Top teams will receive internship offers from our startup partners.</li>
+                    <li>*Expert Mentorship:* Get guidance from a panel of industry experts and senior faculty.</li>
+                    <li>*Certificates & Awards:* All participants will receive a certificate of participation, with special awards for winners.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section (simplified to a button) -->
+    <section id="register" class="section-container">
+        <div class="max-w-2xl w-full p-8 bg-[#20252b] rounded-xl shadow-lg text-center fade-in">
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-6 text-white">Ready to Join the Xplosion?</h2>
+            <p class="text-gray-400 mb-6">
+                Click below to register your team and start your innovation journey!
+            </p>
+            <a href="register.html" class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-md transition-colors duration-300 transform hover:scale-105">
+                Register Now!
+            </a>
+            <p class="text-gray-500 text-sm mt-4">
+                Registration closes on September 15, 2025.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm py-4">
+        &copy; 2024 CodeXplosion. Organized by Artificial Intelligence & Data Science Department, Dhanalakshmi College of Engineering.
+    </footer>
+
+    <!-- JavaScript for scroll-based animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // --- Scroll-based animation ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        // Optional: remove visible class if you want elements to re-fade on scroll back up
+                        // entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // --- Countdown logic (to registration close) ---
+            function updateCountdown() {
+                const regCloseDate = new Date("2025-09-15T23:59:59");
+                const now = new Date();
+                const diff = regCloseDate - now;
+                const days = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+                const countdownDiv = document.getElementById("countdown");
+                if (countdownDiv) {
+                    countdownDiv.innerHTML =
+                        days > 0 ? `<span class="block text-2xl">Registration closes in</span> ${days} day${days > 1 ? 's' : ''}!` : "Registration closed!";
+                }
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 60 * 60 * 1000); // Update every hour
+        });
+    </script>
+
+</body>
+</html>
